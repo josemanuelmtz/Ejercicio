@@ -3,14 +3,24 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ToolbarModule } from 'primeng/toolbar';
+import { HeaderComponent } from './pages/header/header.component';
+import { AvatarModule } from 'primeng/avatar';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToolbarModule,
+    AvatarModule
+  ],
+  exports:[
+    ToolbarModule, 
+    AvatarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
